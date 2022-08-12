@@ -11,10 +11,8 @@
     <div id="app">
         <p>1) {{2 + 2}}</p>
         <p>2) {{ 'Teste'.toUpperCase() }}</p>
-        <p>3) Produto: {{nome}}, R$: {{preco}}, {{desconto * 100}}%</p>
+        <p>Produto: {{nome}}, R$: {{preco}}, {{desconto * 100}}%</p>
         <!-- <p>3) {{ {nome, preco, desconto} }}</p> -->
-        <p>4) Hora Certa: {{ horaCerta() }}</p>
-        <p>5) Preço com Desconto: {{ precoComDesconto }}</p>
     </div>
 
     <script>
@@ -24,17 +22,6 @@
                 nome: 'Caneta',
                 preco: 6.89,
                 desconto: 0.15
-            },
-            methods: {
-                horaCerta() {
-                    return new Date().toLocaleString()
-                }
-            },
-            computed: {
-                // Embora precoComDesconto seja uma função você não o chamará com chaves e sim como um valor
-                precoComDesconto() {
-                    return this.preco * (1 - this.desconto)
-                }
             }
         })
     </script>
