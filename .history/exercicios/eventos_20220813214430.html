@@ -16,11 +16,8 @@
         </p>
         <p @mousemove="atualizarPosicao">
             Coordenadas: {{ x }} & {{ y }}
-            <!-- <span @mousemove.stop>Aqui não!</span> -->
-            <span @mousemove="stop">Aqui não!</span>
+            <span @mousemove.stop>Aqui não!</span>
         </p>
-        <input type="text" @keyup.enter="alerta">
-        <!-- <input type="text" @keyup.m="alerta"> -->
     </div>
 
     <script>
@@ -38,12 +35,6 @@
                 atualizarPosicao(e) {
                     this.x = e.clientX,
                     this.y = e.clientY
-                },
-                // stop(e) {
-                //     e.stopPropagation()
-                // },
-                alerta() {
-                    alert('Enter!')
                 }
             }
         })

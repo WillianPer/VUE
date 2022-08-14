@@ -19,8 +19,6 @@
             <!-- <span @mousemove.stop>Aqui não!</span> -->
             <span @mousemove="stop">Aqui não!</span>
         </p>
-        <input type="text" @keyup.enter="alerta">
-        <!-- <input type="text" @keyup.m="alerta"> -->
     </div>
 
     <script>
@@ -41,10 +39,7 @@
                 },
                 // stop(e) {
                 //     e.stopPropagation()
-                // },
-                alerta() {
-                    alert('Enter!')
-                }
+                // }
             }
         })
     </script>
