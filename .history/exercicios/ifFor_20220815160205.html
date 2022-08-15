@@ -8,8 +8,7 @@
 </head>
 <body class="exercicio">
 
-    <div id="app">
-        
+    <div id="add">
         <p v-for="(aluno, i) in alunos">
             {{ i+1 }} ) {{ aluno.nome }} - {{ aluno.nota }}
             <span v-if="aluno.nota >= 9">Quadro de Honra!</span>
@@ -30,7 +29,7 @@
         new Vue({
             el: "#app",
             data:{
-                alunos: [
+                alunos:[
                     {nome: "Ana", nota: 7.8},
                     {nome: "Bia", nota: 9.1},
                     {nome: "Carlos", nota: 6.8},
