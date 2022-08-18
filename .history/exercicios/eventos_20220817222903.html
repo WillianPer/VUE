@@ -11,7 +11,7 @@
     <div id="app">
         <p>{{ contador }}</p>
         <p>
-            <button v-on:click="add">+1</button>
+            <button v-on:click="app">+1</button>
             <button @click="contador -= 3">-3</button>
         </p>
         <p @mousemove="atualizarPosicao">
@@ -33,7 +33,7 @@
             },
             methods: {
                 add() {
-                    return this.contador++
+                    this.contador++
                 },
                 atualizarPosicao(e) {
                     this.x = e.clientX,

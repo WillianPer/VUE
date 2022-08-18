@@ -8,12 +8,16 @@
 </head>
 <body class="exercicio">
     <div id="app">
-        <contador></contador>
-        <contador></contador>
-        <contador></contador>
+        <button v-on:click="add">
+            <adicao valor="contador"></adicao>
+        </button>
+        <button @click="contador -= 3">
+            <adicao valor="contador"></adicao>
+        </button>
     </div>
     <script>
-        Vue.component('contador', {
+        Vue.component('adicao', {
+            props: ['valor'],
             data: function() {
                 return {
                     contador: 0
@@ -25,15 +29,7 @@
                 }
             },
             template: `
-                <div> 
-                    <span>O valor é: {{ contador }}!</span>
-                    <button v-on:click="add">
-                        +1
-                    </button>
-                    <button @click="contador -= 3">
-                        -3
-                    </button>    
-                </div>
+                <div> O valor é: {{ valor }}! </div>
             `
         })
 
